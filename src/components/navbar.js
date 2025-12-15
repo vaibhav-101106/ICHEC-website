@@ -214,17 +214,9 @@ function Navbar() {
             </li>
 
             {/* Simple links */}
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/registration" onClick={closeDropdown}>
-                Registration
-              </NavLink>
-            </li>
+          
 
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/awards" onClick={closeDropdown}>
-                Awards
-              </NavLink>
-            </li>
+         
 
             <li className="nav-item ms-2">
               <NavLink
