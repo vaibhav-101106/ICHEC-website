@@ -18,11 +18,12 @@ function Navbar() {
       <div className="container">
         {/* Brand */}
         <Link className="navbar-brand d-flex align-items-center" to="/" onClick={closeDropdown}>
-          <img
-            src="/assets/iitp-logo.png"
-            alt="IIT Patna"
-            style={{ height: 36, marginRight: 10 }}
-          />
+       <img
+  src="/iitplogo.png"
+  alt="IIT Patna"
+  className="navbar-logo"
+/>
+
           <div>
             <div style={{ fontWeight: 700 }}>ICHEC 2026</div>
             <small style={{ opacity: 0.85 }}>

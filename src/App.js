@@ -8,7 +8,6 @@ import Home from "./pages/Home";
 import Registration from "./pages/Registration";
 import Contact from "./pages/Contact";
 
-
 // About
 import AboutOverview from "./pages/about/AboutOverview";
 import AboutHistory from "./pages/about/AboutHistory";
@@ -23,56 +22,52 @@ import ProgramSpeakers from "./pages/program/ProgramSpeakers";
 import TravelPatna from "./pages/travel/TravelPatna";
 import TravelVisa from "./pages/travel/TravelVisa";
 
-// Industry Ties
+// Industry
 import IndustryPatron from "./pages/industry/IndustryPatron";
 import IndustrySponsors from "./pages/industry/IndustrySponsors";
 
 function App() {
   return (
-    <>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+      {/* MAIN CONTENT */}
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        {/* About */}
-        <Route path="/about" element={<AboutOverview />} />
-        <Route path="/about/history" element={<AboutHistory />} />
-        <Route path="/about/committee" element={<AboutCommittee />} />
-        <Route path="/about/track-chair" element={<AboutTrackChair />} />
+          {/* About */}
+          <Route path="/about" element={<AboutOverview />} />
+          <Route path="/about/history" element={<AboutHistory />} />
+          <Route path="/about/committee" element={<AboutCommittee />} />
+          <Route path="/about/track-chair" element={<AboutTrackChair />} />
 
-        {/* Program */}
-        <Route path="/program" element={<ProgramOverview />} />
-        <Route path="/program/speakers" element={<ProgramSpeakers />} />
+          {/* Program */}
+          <Route path="/program" element={<ProgramOverview />} />
+          <Route path="/program/speakers" element={<ProgramSpeakers />} />
 
-      {/* Travel */}
-        <Route path="/travel/patna" element={<TravelPatna />} />
-        <Route path="/travel/visa" element={<TravelVisa />} />
+          {/* Travel */}
+          <Route path="/travel/patna" element={<TravelPatna />} />
+          <Route path="/travel/visa" element={<TravelVisa />} />
 
-        {/* Industry */}
-        <Route path="/industry/patron" element={<IndustryPatron />} />
-        <Route path="/industry/sponsors" element={<IndustrySponsors />} />
+          {/* Industry */}
+          <Route path="/industry/patron" element={<IndustryPatron />} />
+          <Route path="/industry/sponsors" element={<IndustrySponsors />} />
 
-        {/* Other */}
-        <Route path="/registration" element={<Registration />} />
-        <Route path="/contact" element={<Contact />} />
+          {/* Other */}
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
 
-      </Routes>
-
-     <footer
-  style={{
-    background: "red",
-    padding: "60px 0",
-    minHeight: "200px",
-    border: "5px solid yellow",
-  }}
->
-
+      {/* FOOTER */}
+      <footer style={{ background: "#020617", padding: "3rem 0" }}>
         <div className="container">
-          <div className="row gy-4">
-            <div className="col-md-4">
-              <h5 className="text-white">ICHEC 2026</h5>
-              <p className="small">
+          <div className="row align-items-center gy-4">
+            <div className="col-md-4 text-light">
+              <h5>ICHEC 2026</h5>
+              <p className="small mb-0">
                 Dept. of Chemical &amp; Biochemical Engineering
                 <br />
                 Indian Institute of Technology Patna
@@ -80,33 +75,41 @@ function App() {
                 Bihta, Patna — 801106
               </p>
             </div>
-            <div className="col-md-4">
-              <h6 className="text-white">Contact</h6>
+
+            <div className="col-md-4 text-light">
+              <h6>Contact</h6>
               <p className="small mb-1">
-                Email: <a href="mailto:ichec@iitp.ac.in">ichec@iitp.ac.in</a>
+                Email:{" "}
+                <a
+                  href="mailto:ichec@iitp.ac.in"
+                  style={{ color: "#d8e2ec", textDecoration: "none" }}
+                >
+                  ichec@iitp.ac.in
+                </a>
               </p>
               <p className="small mb-0">Phone: +91 612 302 5000</p>
             </div>
-            <div className="col-md-4 text-md-end">
-<img
-  src={process.env.PUBLIC_URL + "/iitplogo.png"}
-  alt="iitp"
-  style={{
-    maxHeight: "80px",
-    border: "3px solid blue",
-    background: "white",
-  }}
-/>
 
-              <div className="mt-3 small">
-                © 2026 Dept. of Chemical &amp; Biochemical Engineering — IIT
-                Patna
+            <div className="col-md-4 text-md-end">
+              <img
+                src="/iitplogo.png"
+                alt="IIT Patna Logo"
+                style={{
+                  height: "80px",
+                  background: "white",
+                  padding: "8px",
+                  borderRadius: "6px",
+                  display: "inline-block",
+                }}
+              />
+              <div className="mt-3 small text-light">
+                © 2026 IIT Patna
               </div>
             </div>
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
 
