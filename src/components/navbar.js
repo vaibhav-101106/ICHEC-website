@@ -214,7 +214,15 @@ function Navbar() {
             </li>
 
             {/* Simple links */}
-          
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/contact"
+                onClick={closeDropdown}
+              >
+                Contact
+              </NavLink>
+            </li>
 
          
 

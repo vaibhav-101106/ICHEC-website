@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 // pages
 import Home from "./pages/Home";
 import Registration from "./pages/Registration";
+import Contact from "./pages/Contact";
 
 
 // About
@@ -54,7 +55,8 @@ function App() {
 
         {/* Other */}
         <Route path="/registration" element={<Registration />} />
-       
+        <Route path="/contact" element={<Contact />} />
+
       </Routes>
 
       <footer>
