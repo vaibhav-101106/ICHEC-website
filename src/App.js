@@ -59,7 +59,15 @@ function App() {
 
       </Routes>
 
-      <footer>
+     <footer
+  style={{
+    background: "red",
+    padding: "60px 0",
+    minHeight: "200px",
+    border: "5px solid yellow",
+  }}
+>
+
         <div className="container">
           <div className="row gy-4">
             <div className="col-md-4">
@@ -80,11 +88,16 @@ function App() {
               <p className="small mb-0">Phone: +91 612 302 5000</p>
             </div>
             <div className="col-md-4 text-md-end">
-              <img
-                src="/assets/iitp-footer.png"
-                alt="iitp"
-                style={{ maxHeight: "80px" }}
-              />
+<img
+  src={process.env.PUBLIC_URL + "/iitplogo.png"}
+  alt="iitp"
+  style={{
+    maxHeight: "80px",
+    border: "3px solid blue",
+    background: "white",
+  }}
+/>
+
               <div className="mt-3 small">
                 © 2026 Dept. of Chemical &amp; Biochemical Engineering — IIT
                 Patna
